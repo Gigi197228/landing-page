@@ -1,0 +1,91 @@
+/* police montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* police playfair display*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Police du corps du texte */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Police des titres */
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+.bouton {
+    /* Espace avant le bouton Contact */
+    margin-left: 30px;
+    /* style des boutons des articles */
+    background-color: black;
+    color: white;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* a supprimer */
+img {
+    width: 100px;
+}
+
+/*HEADER / BARRE DE NAVIGATION --------------------------------------------------------------------------------------*/
+
+/* On applique le display flex sur la boite, ici la balise nav, qui va aligner l'image du logo et la liste ul */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+/* On met en rang les éléments de liste grâce à display : flex et on espace les éléments avec un gap */
+nav ul {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+    /* Espace entre les éléments */
+    gap: 30px;
+}
+
+nav ul a {
+    /* couleur de texte de mes liens */
+    color: #2E2A26
+}
+
+.bouton-contact {
+    /* Espace avant le bouton Contact */
+    margin-left: 30px;
+    /* style des boutons des articles */
+    background-color: black;
+    color: white;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* On redimensionne la hauteur de l'image et width auto pour que cela garde les bonnes proportions */
+nav img {
+    width: auto;
+    height: 15vh;
+}
+
+/*SECTION1-ENTREPRISE --------------------------------------------------------------------------------------*/
+
+#section1-entreprise {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    gap: 30px;
+}
+
+#section1-entreprise img {
+    width: 300px;
+    height: auto;
+}
+
+/*SECTION2-PROMESSES --------------------------------------------------------------------------------------*/
+/*SECTION3-SERVICES --------------------------------------------------------------------------------------*/
+/*SECTION4-PRODUITS --------------------------------------------------------------------------------------*/
+/*SECTION10-TEMOIGNAGES --------------------------------------------------------------------------------------*/
+/*FOOTER --------------------------------------------------------------------------------------*/
