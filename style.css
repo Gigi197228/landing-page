@@ -1,6 +1,6 @@
 /* site pour importer des polices: https://fonts.google.com/ */
 /* police montserrat */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
 /* police playfair display*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
@@ -15,6 +15,7 @@ h2,
 h3 {
     font-family: 'Playfair Display', serif;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 button {
@@ -26,9 +27,9 @@ button {
 }
 
 /* a supprimer */
-img {
+/* img {
     width: 100px;
-}
+} */
 
 /*HERO HEADER / BARRE DE NAVIGATION --------------------------------------------------------------------------------------*/
 
@@ -45,7 +46,7 @@ header {
 /* On applique le display flex sur la boite, ici la balise nav, qui va aligner l'image du logo et la liste ul */
 nav {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     padding: 16px;
 }
@@ -53,7 +54,8 @@ nav {
 /* On met en rang les éléments de liste grâce à display : flex et on espace les éléments avec un gap */
 nav ul {
     display: flex;
-    gap: 12px;
+    align-items: center;
+    gap: 30px;
     margin-left: auto;
     /* Espace entre les éléments */
     gap: 30px;
@@ -75,8 +77,6 @@ nav li a:hover {
 }
 
 .bouton-contact {
-    /* Espace avant le bouton Contact */
-    margin-left: 30px;
     /* style des boutons des articles */
     background-color: black;
     color: white;
@@ -106,16 +106,18 @@ nav img {
     width: 100%;
 }
 
+.mb5 {
+    text-shadow: 3px 5px 8px rgba(0, 0, 0, 0.5);
+    font-size: x-large;
+}
+
 /* BLOC DE GAUCHE */
 .texte-bouton1 {
     /* le bloc occupe exactement 50 % de la largeur disponible dans son conteneur parent. */
     flex: 0 0 50%;
     /* dispaly flex sert à organiser les éléments enfants qui se trouvent à l'intérieur de la classe .texte-image1. */
-    /*  */
     display: flex;
-    /* flex-direction: row; */
     justify-content: center;
-    /* padding: 40px; */
     box-sizing: border-box;
 }
 
@@ -125,9 +127,9 @@ nav img {
     justify-content: center;
 }
 
-.mb5 {
+/* .mb5 {
     margin-bottom: 5px;
-}
+} */
 
 .button-white {
     background-color: white;
@@ -164,6 +166,7 @@ nav img {
 }
 
 /*SECTION2-PROMESSES --------------------------------------------------------------------------------------*/
+
 #section2-promesses {
     background-color: burlywood;
     /* Active Flexbox pour disposer les deux blocs côte à côte. */
@@ -176,6 +179,7 @@ nav img {
 #promesses-texte {
     text-align: center;
     padding: 40px;
+    font-size: x-large;
 }
 
 /* BLOC DE DROITE */
@@ -191,6 +195,17 @@ nav img {
     height: 250px;
     /* L'image est visible en entier, mais peut laisser des espaces vides. */
     object-fit: contain;
+    margin-bottom: 30px;
+}
+
+ul {
+    margin-right: 60px;
+    text-align: justify;
+}
+
+p {
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
 /* BLOC DE GAUCHE */
@@ -211,21 +226,23 @@ li {
 }
 
 /*SECTION3-SERVICES --------------------------------------------------------------------------------------*/
+
 #section3-services {
     background-color: #EAD8C3;
-    padding: 60px 5%;
+    padding: 40px 5%;
 }
 
 #section3-services h2 {
     text-align: center;
     margin-bottom: 40px;
+    font-size: x-large;
 }
 
 /* Display flex: les 3 articles côte à côte */
 .services-articles {
     display: flex;
     gap: 24px;
-    max-width: 1100px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -263,6 +280,7 @@ li {
 }
 
 /*SECTION4-PRODUITS --------------------------------------------------------------------------------------*/
+
 #section4-produits-praline-croustillant {
     background-color: burlywood;
 }
@@ -271,6 +289,7 @@ li {
 .produit-texte {
     text-align: center;
     padding: 40px;
+    font-size: x-large;
 }
 
 /* BLOC DE GAUCHE */
@@ -285,6 +304,11 @@ li {
 
 .produits-texte h3 {
     margin-bottom: 20px;
+}
+
+.produits-texte p {
+    margin-right: 60px;
+    text-align: justify;
 }
 
 /* BLOC DE DROITE */
@@ -295,14 +319,9 @@ li {
 }
 
 /*SECTION5-PRODUITS --------------------------------------------------------------------------------------*/
+
 #section5-produits-truffe-champagne {
     background-color: #EAD8C3;
-}
-
-/* Pour aligner H2 au centre */
-.produit-texte {
-    text-align: center;
-    padding: 40px;
 }
 
 /* BLOC DE GAUCHE */
@@ -312,7 +331,6 @@ li {
     /* Résultat : le bloc image occupe la moitié de la largeur de ta section Hero. */
 }
 
-
 /* BLOC DE DROITE */
 .produits-image-texte article {
     /* display: flex active Flexbox pour organiser les éléments enfants.*/
@@ -321,38 +339,158 @@ li {
     flex-direction: row;
     align-items: center;
     padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+#section5-produits-truffe-champagne article {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 40px;
 }
 
 .produits-texte h3 {
     margin-bottom: 20px;
 }
 
+.p-produits {
+    margin-left: 40px;
+}
+
 /*SECTION6-PRODUITS --------------------------------------------------------------------------------------*/
+
 #section6-produits-tablette-chocolat-noir {
     background-color: burlywood;
 }
 
 /*SECTION7-PRODUITS --------------------------------------------------------------------------------------*/
+
 #section7-produits-coffret-chocolats-assortis {
     background-color: #EAD8C3;
 }
 
+#section7-produits-coffret-chocolats-assortis article {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 40px;
+}
+
 /*SECTION8-PRODUITS --------------------------------------------------------------------------------------*/
+
 #section8-produits-chocolat-chaud {
     background-color: burlywood;
 }
 
 /*SECTION9-PRODUITS --------------------------------------------------------------------------------------*/
+
 #section9-produits-mendiants {
     background-color: #EAD8C3;
 }
 
+#section9-produits-mendiants article {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 40px;
+}
+
 /*SECTION10-TEMOIGNAGES --------------------------------------------------------------------------------------*/
+
 #section10-temoignages {
     background-color: burlywood;
+    /* padding est l’espace à l’intérieur d’un élément, entre son contenu et son bord. 
+    Quand on écrit deux valeurs, la première s’applique en haut et en bas, la seconde à gauche et à droite.*/
+    padding: 60px 5%;
+    /* met les éléments côte à côte */
+    display: flex;
+    flex-direction: column;
+    /* autorise le retour à la ligne : le titre sera seul sur sa ligne */
+    /* flex-wrap: wrap; */
+    gap: 24px;
+}
+
+/* titre centré */
+#section10-temoignages h2 {
+    text-align: center;
+}
+
+.conteneur-temoignages {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+/* chaque bloc temoignage+auteur prend la moitié de l'espace */
+.background-color {
+    flex: 1;
+    background-color: #EAD8C3;
+    padding: 24px;
+}
+
+/* texte du témoignage */
+.temoignages {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+/* photo + prenom + note sur une même ligne */
+.auteur {
+    display: flex;
+    gap: 12px;
+}
+
+/* photo ronde */
+.auteur img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /*FOOTER --------------------------------------------------------------------------------------*/
+
 footer {
     background-color: white;
+    padding: 60px 5%;
+    /* met les 2 colonnes côte à côte */
+    display: flex;
+    gap: 60px;
+    /* centre verticalement les 2 colonnes */
+    align-items: center;
+}
+
+/* icônes des réseaux sociaux alignées */
+.reseaux {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+/* taille des icônes des réseaux sociaux */
+.reseaux img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+/* formulaire : champs les uns sous les autres */
+.footer-droite {
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 40px; */
+    /* crée un espace entre chaque élément enfant du conteneur */
+    gap: 12px;
+}
+
+.bouton:hover {
+    opacity: 0.75;
+    font-weight: bold;
+}
+
+.texte-footer {
+    display: flex;
+    margin-right: 60px;
+    text-align: left;
 }
