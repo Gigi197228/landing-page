@@ -1,3 +1,4 @@
+/* site pour importer des polices: https://fonts.google.com/ */
 /* police montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* police playfair display*/
@@ -10,13 +11,13 @@ body {
 
 /* Police des titres */
 h1,
-h2 {
+h2,
+h3 {
     font-family: 'Playfair Display', serif;
+    font-weight: bold;
 }
 
-.bouton {
-    /* Espace avant le bouton Contact */
-    margin-left: 30px;
+button {
     /* style des boutons des articles */
     background-color: black;
     color: white;
@@ -29,7 +30,17 @@ img {
     width: 100px;
 }
 
-/*HEADER / BARRE DE NAVIGATION --------------------------------------------------------------------------------------*/
+/*HERO HEADER / BARRE DE NAVIGATION --------------------------------------------------------------------------------------*/
+
+/* couleur de fond du header */
+header {
+    background-color: white;
+}
+
+/* display: flex est une propriété CSS qui active le système Flexbox sur un élément HTML afin de faciliter */
+/* l'organisation et l'alignement de ses éléments enfants, horizontalement ou verticalement, avec la possibilité */
+/* de gérer leur espacement et leur positionnement. */
+/* On applique avec: flex-direction, flex-wrap, align content, justify-content, align-items */
 
 /* On applique le display flex sur la boite, ici la balise nav, qui va aligner l'image du logo et la liste ul */
 nav {
@@ -48,9 +59,19 @@ nav ul {
     gap: 30px;
 }
 
+/* Réduit légèrement la transparence du logo quand on clique dessus */
+a img:hover {
+    opacity: 0.7;
+}
+
 nav ul a {
     /* couleur de texte de mes liens */
     color: #2E2A26
+}
+
+/* On ajoute un interaction au survol des liens */
+nav li a:hover {
+    color: #D8935C;
 }
 
 .bouton-contact {
@@ -63,6 +84,12 @@ nav ul a {
     border-radius: 6px;
 }
 
+/* hover déclenche l'effet lorsque la souris passe sur le bouton. */
+nav .bouton-contact:hover {
+    /* déclenche l'agrandissement du bouton lorsque la souris passe dessus */
+    transform: scale(1.05);
+}
+
 /* On redimensionne la hauteur de l'image et width auto pour que cela garde les bonnes proportions */
 nav img {
     width: auto;
@@ -72,20 +99,260 @@ nav img {
 /*SECTION1-ENTREPRISE --------------------------------------------------------------------------------------*/
 
 #section1-entreprise {
+    background-color: #EAD8C3;
+    /* Active Flexbox pour disposer les deux blocs côte à côte. */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-    gap: 30px;
+    /* Donne au conteneur toute la largeur disponible. */
+    width: 100%;
 }
 
-#section1-entreprise img {
-    width: 300px;
-    height: auto;
+/* BLOC DE GAUCHE */
+.texte-bouton1 {
+    /* le bloc occupe exactement 50 % de la largeur disponible dans son conteneur parent. */
+    flex: 0 0 50%;
+    /* dispaly flex sert à organiser les éléments enfants qui se trouvent à l'intérieur de la classe .texte-image1. */
+    /*  */
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    /* padding: 40px; */
+    box-sizing: border-box;
+}
+
+.texte-bouton2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mb5 {
+    margin-bottom: 5px;
+}
+
+.button-white {
+    background-color: white;
+    color: black;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.boutons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.boutons-div {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+/* BLOC DE DROITE */
+.image {
+    /* le bloc image occupe l'autre moitié. */
+    flex: 0 0 50%;
+    /* Résultat : le bloc image occupe la moitié de la largeur de ta section Hero. */
+}
+
+.image img {
+    /* l'image occupe toute la largeur de son bloc. */
+    width: 100%;
+    height: 250px;
+    /* L'image est visible en entier, mais peut laisser des espaces vides. */
+    object-fit: contain;
 }
 
 /*SECTION2-PROMESSES --------------------------------------------------------------------------------------*/
+#section2-promesses {
+    background-color: burlywood;
+    /* Active Flexbox pour disposer les deux blocs côte à côte. */
+    display: flex;
+    /* Donne au conteneur toute la largeur disponible. */
+    width: 100%;
+    flex-direction: column;
+}
+
+#promesses-texte {
+    text-align: center;
+    padding: 40px;
+}
+
+/* BLOC DE DROITE */
+.image {
+    /* le bloc image occupe l'autre moitié. */
+    flex: 0 0 50%;
+    /* Résultat : le bloc image occupe la moitié de la largeur de ta section Hero. */
+}
+
+.image img {
+    /* l'image occupe toute la largeur de son bloc. */
+    width: 100%;
+    height: 250px;
+    /* L'image est visible en entier, mais peut laisser des espaces vides. */
+    object-fit: contain;
+}
+
+/* BLOC DE GAUCHE */
+.promesses-img-liste {
+    /* le bloc occupe exactement 50 % de la largeur disponible dans son conteneur parent. */
+    flex: 0 0 50%;
+    /* dispaly flex sert à organiser les éléments enfants qui se trouvent à l'intérieur de la classe .texte-image1. */
+    /*  */
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    /* padding: 40px; */
+    box-sizing: border-box;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
 /*SECTION3-SERVICES --------------------------------------------------------------------------------------*/
+#section3-services {
+    background-color: #EAD8C3;
+    padding: 60px 5%;
+}
+
+#section3-services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Display flex: les 3 articles côte à côte */
+.services-articles {
+    display: flex;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* chaque article prend une part égale de la largeur */
+#section3-services article {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F1E8;
+}
+
+#section3-services article img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+#section3-services article div {
+    flex: 1;
+    padding: 20px;
+}
+
+#section3-services article h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#section3-services article .bouton {
+    align-self: center;
+    margin-bottom: 24px;
+}
+
+.services-articles div {
+    flex-direction: row;
+}
+
 /*SECTION4-PRODUITS --------------------------------------------------------------------------------------*/
+#section4-produits-praline-croustillant {
+    background-color: burlywood;
+}
+
+/* Pour aligner H2 au centre */
+.produit-texte {
+    text-align: center;
+    padding: 40px;
+}
+
+/* BLOC DE GAUCHE */
+.produits-image-texte article {
+    /* display: flex active Flexbox pour organiser les éléments enfants.*/
+    display: flex;
+    /* Positionne les éléments enfants les uns à coté des autres, horizontalement */
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.produits-texte h3 {
+    margin-bottom: 20px;
+}
+
+/* BLOC DE DROITE */
+.image {
+    /* le bloc image occupe l'autre moitié. */
+    flex: 0 0 50%;
+    /* Résultat : le bloc image occupe la moitié de la largeur de ta section Hero. */
+}
+
+/*SECTION5-PRODUITS --------------------------------------------------------------------------------------*/
+#section5-produits-truffe-champagne {
+    background-color: #EAD8C3;
+}
+
+/* Pour aligner H2 au centre */
+.produit-texte {
+    text-align: center;
+    padding: 40px;
+}
+
+/* BLOC DE GAUCHE */
+.image {
+    /* le bloc image occupe l'autre moitié. */
+    flex: 0 0 50%;
+    /* Résultat : le bloc image occupe la moitié de la largeur de ta section Hero. */
+}
+
+
+/* BLOC DE DROITE */
+.produits-image-texte article {
+    /* display: flex active Flexbox pour organiser les éléments enfants.*/
+    display: flex;
+    /* Positionne les éléments enfants les uns à coté des autres, horizontalement */
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.produits-texte h3 {
+    margin-bottom: 20px;
+}
+
+/*SECTION6-PRODUITS --------------------------------------------------------------------------------------*/
+#section6-produits-tablette-chocolat-noir {
+    background-color: burlywood;
+}
+
+/*SECTION7-PRODUITS --------------------------------------------------------------------------------------*/
+#section7-produits-coffret-chocolats-assortis {
+    background-color: #EAD8C3;
+}
+
+/*SECTION8-PRODUITS --------------------------------------------------------------------------------------*/
+#section8-produits-chocolat-chaud {
+    background-color: burlywood;
+}
+
+/*SECTION9-PRODUITS --------------------------------------------------------------------------------------*/
+#section9-produits-mendiants {
+    background-color: #EAD8C3;
+}
+
 /*SECTION10-TEMOIGNAGES --------------------------------------------------------------------------------------*/
+#section10-temoignages {
+    background-color: burlywood;
+}
+
 /*FOOTER --------------------------------------------------------------------------------------*/
+footer {
+    background-color: white;
+}
